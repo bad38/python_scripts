@@ -1,0 +1,13 @@
+I have made python codes that will search crystals by these criteria
+
+
+Birth Date
+Arrival Date
+Shipping Date 
+Te Metal Acquissition Date.
+Vacuum Packed Date 
+life in cavern 
+Te acq to Xtal birth 
+Te acq to Xtal storage 
+Xtal current age 
+Xtal birth to storage 
