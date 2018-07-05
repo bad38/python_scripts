@@ -33,17 +33,25 @@ for Number in range(100,1200):
 		FullObject.append(namejsonOK) 
 		
 for name in db.sandbox.find({"name": "Crystal, Glued"}): 
-	namejsonOK = convert(name) 
-		
-	FullObject.append(namejsonOK)
+	
+	value_of_intrest_1 = str(name.get("Xtal_birth_to_storage", "No Data")) 
+	value_of_intrest_2 = str(name.get("Xtal_current_age", "No Data"))
+	value_of_intrest_3 = str(name.get("Te_acq_to_Xtal_birth", "No Data"))
+	value_of_intrest_4 = str(name.get("Te_acq_to_Xtal_storage", "No Data"))
+	value_of_intrest_5 = str(name.get("life_in_canvern", "No Data"))
+	
+	Florance = str(value_of_intrest_1) + ' ' + str(value_of_intrest_2) + ' ' + str(value_of_intrest_3) + ' ' + str(value_of_intrest_4) 
+	FullObject.append(Florance)
+	
+	pprint (FullObject)
 	
 FullObjectAsString = json.dumps( FullObject , indent=4) 
  
-FileHandle = open('Hal9000.json', 'w')
+FileHandle = open('After_your_gone.json', 'w')
 FileHandle.write(FullObjectAsString)
 FileHandle.close()
 
-FileHandle = open('Hal9000.json', 'r')
+FileHandle = open('After_your_gone.json', 'r')
 FullObjectAsStringFromFile = FileHandle.read()
 FileHandle.close()
 
